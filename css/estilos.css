@@ -1,0 +1,320 @@
+/* ============================================================
+   VARIABLES DE COLOR Y TIPOGRAFÍA
+   Si querés cambiar la paleta de toda la página, tocá SOLO acá.
+   ============================================================ */
+:root {
+  --color-fondo-claro: #fdf3ef;      /* rosa muy clarito, fondo general */
+  --color-salmon: #e2967f;            /* color de acento (botones, íconos) */
+  --color-salmon-oscuro: #d1826c;     /* hover de botones */
+  --color-texto-oscuro: #3b2822;      /* casi negro, para títulos serif */
+  --color-texto-gris: #6b6058;        /* gris cálido, para párrafos */
+  --color-blanco: #ffffff;
+
+  --fuente-titulos: "Playfair Display", serif;
+  --fuente-texto: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto-gris);
+  background-color: var(--color-fondo-claro);
+}
+
+h1, h2, h3, .fuente-serif {
+  font-family: var(--fuente-titulos);
+  color: var(--color-texto-oscuro);
+}
+
+
+/* ============================================================
+   BOTÓN "RESERVAR TURNO" (se usa en navbar y en el hero)
+   ============================================================ */
+.btn-reservar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-salmon);
+  color: var(--color-blanco) !important;
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-reservar:hover {
+  background-color: var(--color-salmon-oscuro);
+  color: var(--color-blanco);
+}
+
+.btn-reservar-lg {
+  padding: 14px 30px;
+  font-size: 0.9rem;
+}
+
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar-tania {
+  background-color: var(--color-fondo-claro);
+  padding: 18px 0;
+}
+
+.navbar-tania .brand-nombre {
+  font-family: var(--fuente-titulos);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-texto-oscuro);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.navbar-tania .brand-subtitulo {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: var(--color-salmon);
+  font-weight: 600;
+}
+
+.navbar-tania .nav-link {
+  color: var(--color-texto-oscuro);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin: 0 12px;
+  position: relative;
+}
+
+.navbar-tania .nav-link.active {
+  font-weight: 700;
+}
+
+/* El puntito rosa debajo del link activo ("Inicio") */
+.navbar-tania .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-salmon);
+}
+
+
+/* ============================================================
+   HERO (sección principal con foto de fondo)
+   Reemplazá "img/hero-home.jpg" por tu foto real
+   ============================================================ */
+.hero-home {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, rgba(20, 12, 10, 0.85), rgba(20, 12, 10, 0.25)),
+              url("../img/hero-home.jpg") center center / cover no-repeat;
+}
+
+.hero-home .hero-contenido {
+  max-width: 650px;
+  padding: 0 60px;
+  color: var(--color-blanco);
+}
+
+.hero-home .hero-titulo {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-blanco);
+  margin-bottom: 10px;
+}
+
+.hero-home .hero-subtitulo {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-blanco);
+  margin-bottom: 20px;
+}
+
+.hero-home .hero-texto {
+  font-size: 1rem;
+  color: #ebe4e1;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   SECCIÓN "EXPERIENCIA" (título + párrafo centrado)
+   ============================================================ */
+.seccion-experiencia {
+  text-align: center;
+  padding: 80px 20px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.seccion-experiencia h2 {
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+}
+
+.seccion-experiencia p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   SECCIÓN "SERVICIOS DESTACADOS" (3 tarjetas con ícono)
+   ============================================================ */
+.seccion-servicios {
+  padding: 40px 20px 90px;
+}
+
+.seccion-servicios h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+.tarjeta-servicio {
+  background-color: var(--color-blanco);
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: left;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(59, 40, 34, 0.06);
+}
+
+.tarjeta-servicio .icono-circulo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #fbe4de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--color-salmon);
+  margin-bottom: 24px;
+}
+
+.tarjeta-servicio h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.tarjeta-servicio p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   SECCIÓN "GALERÍA" (Creado en el Estudio)
+   ============================================================ */
+.seccion-galeria {
+  padding: 40px 20px 90px;
+}
+
+.seccion-galeria .eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--color-salmon);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.seccion-galeria h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+
+.seccion-galeria .link-ver-galeria {
+  color: var(--color-salmon);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.seccion-galeria .link-ver-galeria:hover {
+  color: var(--color-salmon-oscuro);
+}
+
+.seccion-galeria img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+
+/* ============================================================
+   SECCIÓN "TESTIMONIO"
+   ============================================================ */
+.seccion-testimonio {
+  text-align: center;
+  padding: 30px 20px 100px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.seccion-testimonio .icono-comilla {
+  font-size: 1.8rem;
+  color: var(--color-salmon);
+  margin-bottom: 20px;
+}
+
+.seccion-testimonio .cita {
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  color: var(--color-texto-oscuro);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.seccion-testimonio .autor-nombre {
+  font-weight: 700;
+  color: var(--color-texto-oscuro);
+  font-size: 0.95rem;
+}
+
+.seccion-testimonio .autor-detalle {
+  font-size: 0.85rem;
+  color: var(--color-texto-gris);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer-tania {
+  background-color: var(--color-texto-oscuro);
+  color: #ede4e0;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer-tania p {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+
+/* ============================================================
+   RESPONSIVE: ajustes para pantallas chicas (celular)
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero-home .hero-titulo { font-size: 2.6rem; }
+  .hero-home .hero-subtitulo { font-size: 1.3rem; }
+  .hero-home .hero-contenido { padding: 0 30px; }
+  .seccion-galeria img { height: 220px; }
+}
