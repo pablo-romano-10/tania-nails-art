@@ -1,0 +1,7 @@
+</main>
+<footer class="footer-tania">
+  <p class="mb-0 small">&copy; <?= date('Y') ?> Tanianailsart. Todos los derechos reservados.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
